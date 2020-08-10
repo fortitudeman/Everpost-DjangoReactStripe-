@@ -1,0 +1,227 @@
+.logo {
+  margin-left: 50px;
+}
+.post{
+  background-color: #f2f1f8;
+  background-image: url("../images/background1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.logostripe {
+  margin-right: 10px;
+} 
+.powered {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-right: 10px;
+  font-family:"Times New Roman", Times, serif;
+  outline: none !important;
+}
+.skip {
+  background-image: linear-gradient(to right, #6d38ff 0%, #8c21ff 51%, #b204ff 100%);
+  color: #f0f0f0;
+  margin-right: 50px;
+  border-radius: 100px;
+  font-family:"Times New Roman", Times, serif;
+  outline: none !important;
+  height:50px;
+  margin-top: -10px;
+}
+.video {
+  width: 50%;
+  margin-top:40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+  
+}
+.underline {
+  text-decoration: underline;
+  display: inline;
+  text-decoration-color: blue;
+}
+.text {
+  margin-top: 160px;
+  text-align: center;
+  color:#200d3a;
+  font-family: "Times New Roman", Times, serif;
+}
+p span {
+  display: block;
+}
+.link {
+  margin-left: 40px;
+  color: #544567
+}
+.number {
+  color:#683cff;
+  display: inline;
+  margin-right: 10px;
+}
+.bar {
+  margin-top: 20px;
+} 
+.message {
+  width: 3%;
+  margin-top:200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.question{
+  text-align: center;
+  margin-top:20px;
+}
+.answer {
+  text-align: center;
+  margin-top: 40px;
+}
+.card {
+  padding: 5% 2% 5% 5%;
+  background-color: #ffffff;
+  display: inline-block;
+  margin-bottom: 10px;
+  min-width: 200px;
+  width: 60%;
+  font-size: 2.3rem;
+  font-family: inherit;
+  font-family: Arial, Helvetica, cursive;
+}
+.cardimage {
+  background-color: #ffffff;
+  padding: 0px;
+  border-radius:60px 60px 20px 20px;
+  width: 60%;
+  margin-left:5%;
+}
+.sup {
+  font-size: small;
+  margin-top:5px;
+}
+.sup-content {
+  font-size: small;
+  margin-top:3px;
+}
+.cardRow {
+  margin-top: 50px;
+}
+.textline {
+  padding-left: 2%;
+  font-size: 2rem;
+}
+.content {
+  padding-left: 2%;
+}
+.circle{
+  border-radius: 50%;
+  margin: 5px;
+  height: 25px;
+  width: 25px;
+  background-image: linear-gradient(to right, #dcb4f9 0%, #d1acfa 51%, #c0a6fa 100%);
+}
+.card-header {
+  color: #683cff;
+  display: flex;
+}
+.card-footer {
+  margin-top: 60px;
+  font-size: 1.5rem;
+}
+.left {
+  border-radius: 7px 30px 30px 30px;
+  margin-right: 5%;
+}
+.right {
+  border-radius: 30px 7px 30px 30px;
+  margin-left: 5%;
+}
+.img1 {
+  width: 100%;
+}
+
+.card-content {
+  margin-top:30px;
+  display: flex;
+  font-size: 1.7rem;
+}
+.cardimage > .card-header, .cardimage > .card-content{
+  padding: 20px
+} 
+.cardimage > .card-header {
+  margin-top: 30px;
+  font-size: 2.3rem;
+}
+.pencil {
+  width: 3%;
+  margin-top:20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.stone  {
+  text-align: center;
+}
+.description {
+  text-align: center;
+}
+.pay {
+  background-color: #f0f0f0;
+  text-align: center;
+}
+.amount{
+  display: inline ;
+  margin-right: 10px;
+}
+.period{
+  display: inline-block;
+  color: #7b7b7b;
+  line-height: 13px;
+}
+.detail {
+  border-right: 5px solid gray;
+  padding-top: 100px;
+}
+.gPay {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: black;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.info{
+  padding: 10%;
+}
+.line {
+  width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #000; 
+   line-height: 0.1em;
+   margin: 10px 0 20px;
+}
+.line>span {
+  background:#f3f3f3; 
+  padding:0 10px; 
+}
+.seperator{
+  margin-top: 50px;
+  
+}
+.term {
+  width: 80%;
+  font-size: 11px;
+}
+.desc {
+  margin-top: 35%;
+}
+.foot {
+  background: #683cff;
+  height: 10px;
+  margin-top: 15%;
+}
