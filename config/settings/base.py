@@ -22,7 +22,7 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 
-ALLOWED_HOSTS = ['localhost']#['everpoststripe.herokuapp.com']
+ALLOWED_HOSTS = ['everpostwithstripe.herokuapp.com']
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'build/static')
