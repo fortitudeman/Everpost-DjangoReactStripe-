@@ -23,7 +23,7 @@ const Integration = () => {
                         <img src={logostripe} alt="stripelogo" className="logostripe pull-right" width="10%"/>
                     </div>
                     <div className="text">
-                        <p>
+                        <p style={{fontSize:"4.5rem"}}>
                             <span>
                                 So, you're going with Everpost 
                             </span>
@@ -33,7 +33,7 @@ const Integration = () => {
                         </p>
                     </div>
                     <div className="text">
-                        <nav>
+                        <nav style={{fontSize:"2rem"}}>
                             <a href="#" className="link"><span className="number">1</span>Watch what's next?</a>
                             <a href="#" className="link"><span className="number">2</span>Read FAQs</a>
                             <a href="#" className="link"><span className="number">3</span>Make payment</a>
@@ -55,7 +55,7 @@ const Integration = () => {
                         </div>
                         <center>
                             <div className="text">
-                                <nav>
+                                <nav style={{fontSize:"2rem"}}>
                                     <a href="#" className="link"><span className="number">1</span>Watch what's next?</a>
                                     <a href="#" className="link"><span className="number">2</span>Read FAQs</a>
                                     <a href="#" className="link"><span className="number">3</span>Make payment</a>
