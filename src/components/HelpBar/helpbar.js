@@ -2,7 +2,7 @@ import React from 'react'
 import './helpbar.css';
 const Helpbar = () => {
     return (
-        <div className="row" style={{marginTop:"90px"}}>
+        <div className="row help-row">
             <div className="col-md-4"></div>
             <div className="col-md-4">
                 <div className="row">
