@@ -1,0 +1,16 @@
+.number {
+    color:#683cff;
+    display: inline;
+    margin-right: 10px;
+}
+.description {
+    color: #544567;
+    font-family: 'Beausite';
+    font-size: 15px;
+}
+.help {
+    text-align: center;
+}
+.help a {
+    text-decoration: none;
+}

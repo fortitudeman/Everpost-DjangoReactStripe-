@@ -1,0 +1,95 @@
+.logo-bar {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.ever-logo {
+    min-width: 50px;
+    padding-left: 20px;
+}
+.ever-logo img {
+    width: 60%;
+    float: left;
+}
+.title {
+    padding-top: 10%;
+}
+.title p {
+    font-size: 47px;
+}
+.skip-button {
+    float: right;
+}
+.stripe-logo {
+    padding-right: 0;
+    padding-left: 0;
+}
+.skip {
+    border-radius: 50px;
+    min-width: 134px;
+    height: 45px;
+    color: #f2f1f8;
+    background-image: linear-gradient(to right, #6d38ff 0%, #8c21ff 51%, #b204ff 100%);
+    outline: none;
+    border: none;
+}
+.power {
+    margin-top: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: solid 1px #afacc8;
+    height: 30px;
+    outline: none;
+    width: auto;
+}
+.power span {
+    font-family: 'Beausite';
+    display: block;
+    color: #afacc8;
+}
+.power span p {
+    font-family: 'Bold';
+    font-size: 20px;
+    display: inline;
+    color: #9595b3;
+}
+.skip span {
+    font-family: "Beausite";
+}
+
+.title p span {
+    display:inline-block;
+    padding-bottom:1px;
+    background: 
+        linear-gradient(to left,  #6041ff, #b601ff); 
+    background-size:100% 2px;
+    background-position:bottom 0 left 0,bottom 5px left 0;
+    background-repeat:no-repeat;
+}
+
+@media only screen and (max-width: 990px) {
+    .skip-button {
+        float: none;
+        margin-top: 75px;
+    }
+    .ever-logo img {
+        float: none;
+        width: 40%;
+    }
+    .power {
+        margin-top: 10px;
+        height: 30px;
+    }
+    .help {
+        display:none;
+    }
+}
+@media only screen and (min-width:990px) and (max-width: 1300px) {
+    .power {
+        height: 50px;
+        margin-top: 0;
+    }
+    .skip{
+        min-width: 115px;
+    }
+}

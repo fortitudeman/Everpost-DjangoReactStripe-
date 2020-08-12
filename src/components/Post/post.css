@@ -1,0 +1,7 @@
+.post {
+    background-color: #f2f1f8;
+    background-image: url("../../images/background1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+}
