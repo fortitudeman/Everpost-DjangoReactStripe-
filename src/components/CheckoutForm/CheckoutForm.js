@@ -96,22 +96,21 @@ class CheckoutForm extends React.Component {
         {this.state.resp_message && <h1>{this.state.resp_message}</h1>}
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
           </div>
           <div className="form-group">
-            <label for="name">Name on Card</label>
+            <label htmlFor="name">Name on Card</label>
             <input type="text" className="form-control" name="name" id="name" onChange={this.handleChange}/>
           </div>
           
           
           <div className="form-group">
-            <label for="info">Card Information
+            <label htmlFor="info">Card Information
               <CardElement
                 className="cardElement"
                 style={{
                   base: {
-                    width: "100%",
                     color: "#32325d",
 
                     fontFamily: '"Helvetica Neue", Helvetica, sans-serif',

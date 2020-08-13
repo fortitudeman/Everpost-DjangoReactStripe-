@@ -7,8 +7,8 @@ const Footer = () => {
             <div className="col col-md-6 col-sm-12 col-xs-12 leftwrapper">
                 <h5 className="footer-left">
                     <span>Powered by <p>stripe</p></span><p className="seperate">|</p> 
-                    <a>Terms</a>
-                    <a>Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
                 </h5>
             </div>
             <div className="col col-md-6 col-sm-12 col-xs-12">

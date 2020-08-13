@@ -3,7 +3,6 @@ import content from './PosterContent';
 import './Poster.css';
 import image1 from '../../images/image1.png';
 const Poster = () => {
-    console.log(content)
     let right = [], left = [], footer = '';
     for (let i of content) {
         if (i.footer) 
@@ -14,7 +13,7 @@ const Poster = () => {
         if (i.position === 'left'){
             left.push(
                 <>
-                    <div className="card left" >
+                    <div keyid={`${content.indexOf(i)}`} className="card left" >
                         <div className="card-header">
                             <div className="sup">Q</div>
                             <div className="content">
