@@ -5,7 +5,7 @@ import messageIcon from '../../images/icon1.png';
 
 export default function PostHeader(props) { 
     let button, text, logoClass, stripeClass;
-    if (props.value == "skip"){
+    if (props.value === "skip"){
         button = <button className='skip'>
                     <span>Skip to payment</span>
                 </button>
