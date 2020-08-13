@@ -1,7 +1,7 @@
 import React from "react";
 import { Elements } from "react-stripe-elements";
 
-import InjectedCheckoutForm from "./CheckoutForm";
+import InjectedCheckoutForm from "../CheckoutForm/CheckoutForm";
 
 //Wrap <Elements /> around your checkout form to group the set
 // of Stripe Elements you're using together, so Stripe can pull

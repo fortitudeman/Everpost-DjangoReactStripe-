@@ -1,0 +1,89 @@
+.stripeInfo {
+    margin-top: 70px;
+    margin-left: 10%;
+    margin-right: 30%;
+}
+.gPay {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: black;
+    border-radius: 5px;
+    height: 50px;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+.gPay img {
+    width:5%;
+    margin-right: 5px;
+}
+.sepLine {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #e8e8e8; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+    color: #8d8d8d;
+ } 
+.sepLine> span { 
+     background:#a1a1a1; 
+     padding:0 10px; 
+     background-color: #ffffff;
+     font-family: 'Beausite';
+}
+.form-group label {
+    float: left;
+    color:#616161;
+}
+form{
+    margin-top: 50px;
+}
+.separator {
+    margin-top: 50px;
+}
+.form-btn {
+    width: 100%;
+    height: 50px;
+    background-color: #683cff;
+    color: #f3f3f3;
+    text-decoration: none;
+    border-radius: 10px;
+    outline:none;
+    border:none;
+    font-family: 'Geometrica';
+}
+.cardElement {
+    width:350% 
+}
+.term {
+    margin-top: 50px;
+}
+.card-explaination {
+    margin-top: 20px;
+    color: rgb(180,180,180)
+}
+@media only screen and (max-width:990px) and (min-width:500px){
+    .stripeInfo {
+        margin: auto;
+        text-align: center;
+        padding:10%;
+    }
+    .cardElement {
+        width: 300%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .stripeInfo{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding: 0 15%;
+    }
+    .cardElement {
+        width: 250%;
+    }
+}

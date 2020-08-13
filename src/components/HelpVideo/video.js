@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import Vimeo from '@u-wave/react-vimeo';
 import './video.css';
 
-const video = () => {
-    const videoRender = (mediaSize, id) => {
+const useWindowSize = () => {
+    const [size, setSize] = useState([0,0]);
+    useLayoutEffect(() => {
+        const updateSize = () => {
+            setSize([window.innerWidth, window.innerHeight]);
+        } 
+        window.addEventListener('resize', updateSize);
+        updateSize();
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+}
+
+const Video = () => {
+    const videoRender = (width,id) => {
         let render;
-        if (mediaSize.matches) {
+        if (width < 900) {
             render = <Vimeo
                         video={id} 
                         width = '350px'
@@ -18,9 +31,9 @@ const video = () => {
         }
         return render
     }
-    let size = window.matchMedia('(max-width:900px )')
-    let ren = videoRender(size, '418706235')
-    // size.addListener(videoRender)
+    
+    const [width, height] = useWindowSize();
+    let ren = videoRender(width, '418706235')
     return (
         <div className="video">
             {ren}
@@ -28,4 +41,5 @@ const video = () => {
             
     )
 }
-export default video;
+export default Video;
+

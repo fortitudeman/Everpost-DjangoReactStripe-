@@ -1,0 +1,38 @@
+
+.pencil {
+    width: 30px;
+    margin-top:20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.unturned {
+    text-align: center;
+    margin-top: 100px;
+}
+.unturned div h4 {
+    line-height: 50px;
+    color: #504267;
+    display: inline;
+    margin-left: 3%;
+}
+.unturned div div {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.unturned div div img {
+    width: 3%;
+}
+.explain {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 21px;
+    color: #504267;
+}
+.explain a {
+    color: #504267;
+    line-height: 40px;
+}
+.explain a u{
+    text-decoration-color:#d6ccf9;
+}

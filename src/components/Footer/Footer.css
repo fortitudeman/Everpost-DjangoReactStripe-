@@ -1,0 +1,72 @@
+.footer-left {
+    margin-left: 45%;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding:2rem 0;color: rgb(180,180,180);
+    display: inline-flex;
+}
+
+.leftwrapper {
+    box-shadow: 10px 0 5px -2px #f8f8f8;
+}
+.footer-left span {
+    font-family: 'Beausite';
+    display: block;
+    color: #afacc8;
+    font-size: 15px;
+    margin-right: 20px;
+}
+.footer-left span p {
+    font-family: 'Bold';
+    font-size: 15px;
+    display: inline;
+    color: #9595b3;
+}
+.footer-left a {
+    margin-left: 10%;
+    color: #9595b3;
+}
+.card-explanation {
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 30%;
+    color: #9595b3;
+    font-family: 'Beausite';
+    line-height: 130%;
+}
+.footer-bar {
+    text-align:center;
+    padding-bottom:5px;
+    background: 
+      linear-gradient(
+        to right, 
+        #6042ff 0%,
+        #663dff 12%,
+        #8922ff 47%,
+        #b601ff 100%
+      )
+      right 
+      bottom  
+      no-repeat; 
+    background-size:100% 7% ;
+  }
+@media only screen and (max-width:990px) {
+    .footer-left {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20%;
+        display:block;
+    }
+    .card-explanation {
+        margin-top: -35%;
+        margin-left: 10%;
+        margin-right:10%;
+        text-align: center;
+    }
+    .leftwrapper {
+        display: flex;
+    }
+    .seperate {
+        display: none;
+    }
+}

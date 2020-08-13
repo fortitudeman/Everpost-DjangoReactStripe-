@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { StripeProvider } from 'react-stripe-elements';
-import MyStoreCheckout from './MyStoreCheckout';
+import MyStoreCheckout from '../Store/MyStoreCheckout';
 
 class CardForm extends Component {
     constructor(props) {
@@ -24,11 +24,13 @@ class CardForm extends Component {
 
     render() {
         return (
-            this.state.stripe && (
+            <>
+            {this.state.stripe && (
                 <StripeProvider stripe = {this.state.stripe}>
                     <MyStoreCheckout />
                 </StripeProvider>
-            )
+            )}
+            </>
         )
     }
 }

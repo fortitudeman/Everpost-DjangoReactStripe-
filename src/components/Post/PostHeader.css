@@ -17,6 +17,34 @@
 .title p {
     font-size: 47px;
 }
+.second-bar p {
+    font-size: 47px;
+}
+.second-bar p span {
+    display:inline-block;
+    padding-bottom:1px;
+    background: 
+        linear-gradient(to left,  #6041ff, #b601ff); 
+    background-size:100% 2px;
+    background-position:bottom 0 left 0,bottom 5px left 0;
+    background-repeat:no-repeat;
+}
+.paynow {
+    margin: 10px 10px
+}
+.message {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.message img {
+    width:10%;
+    margin-bottom: 30px;
+}
+.message-text {
+    color: #544567;
+    font-family: 'Beausite';
+    font-size: 32px;
+}
 .skip-button {
     float: right;
 }
@@ -32,6 +60,9 @@
     background-image: linear-gradient(to right, #6d38ff 0%, #8c21ff 51%, #b204ff 100%);
     outline: none;
     border: none;
+}
+.paynow div a {
+    text-decoration: none;
 }
 .power {
     margin-top: 10px;
@@ -82,6 +113,18 @@
     }
     .help {
         display:none;
+    }
+    .paynow,.hidden-skip, .hidden-stripe, .hidden-logo {
+        display: none;
+    }
+    .message {
+        margin-top: 20px;
+    }
+    .second-bar p{
+        font-size: 28px;
+    }
+    .message-text {
+        font-size: 24px;
     }
 }
 @media only screen and (min-width:991px) and (max-width: 1300px) {

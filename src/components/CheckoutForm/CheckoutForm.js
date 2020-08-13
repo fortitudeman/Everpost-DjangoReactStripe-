@@ -1,8 +1,8 @@
 import React from "react";
-
+import Notifications,{ notify } from 'react-notify-toast';
 import { injectStripe, CardElement } from "react-stripe-elements";
 
-import gPay from '../images/gPaylogo.png'
+import gPay from '../../images/gPaylogo.png'
 import './checkoutform.css'
 
 //CheckoutForm renders the input field and a button and injects
@@ -57,6 +57,7 @@ class CheckoutForm extends React.Component {
       .then(result => {
         if (result.error) {
           console.log("THERE IS AN ERROR IN YOUR FORM", result.error);
+          notify.show(result.error.message, "custom", 3000, { background: 'blue', text: "#FFFFFF" })
           return this.setState({ card_errors: result.error.message });
         } else {
           console.log(
@@ -84,9 +85,9 @@ class CheckoutForm extends React.Component {
 
   render() {
     return (
-      <div className="stripInfo">
+      <div className="stripeInfo">
         <button className="gPay">
-          <img src={gPay} style={{"width": "3%","marginRight":"5px"}} />
+          <img src={gPay}/>
           Pay
         </button>
         <div className="separator">
@@ -95,17 +96,17 @@ class CheckoutForm extends React.Component {
         {this.state.resp_message && <h1>{this.state.resp_message}</h1>}
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label for="email" style={{"float":"left"}}>Email</label>
+            <label for="email">Email</label>
             <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
           </div>
           <div className="form-group">
-            <label for="name" style={{"float":"left"}}>Name on Card</label>
+            <label for="name">Name on Card</label>
             <input type="text" className="form-control" name="name" id="name" onChange={this.handleChange}/>
           </div>
           
           
           <div className="form-group">
-            <label for="info" style={{"float": "left"}}>Card Information
+            <label for="info">Card Information
               <CardElement
                 className="cardElement"
                 style={{
@@ -129,7 +130,7 @@ class CheckoutForm extends React.Component {
                 onChange={this.handleCardErrors}
               />
               <div role="alert">
-                <h2>{this.state.card_errors}</h2>
+                <Notifications />
               </div>
             </label>
           </div>
