@@ -1,10 +1,16 @@
 @font-face {
-    font-family: 'Beausite';
-    src: url('./fonts/BeausiteClassic-Clear.otf') format("opentype");
+    font-family: 'BeausiteClassic-Medium';
+    src:url('./fonts/BeausiteClassic-Clear.otf') format("opentype");
+
     font-family: 'Geometrica';
     src: url("./fonts/Geometrica.otf") format("opentype");
+    
     font-family: 'Libre';
     src: url("./fonts/LibreBaskerville-Regular.ttf") format("truetype");
+    
     font-family: 'Bold';
     src: url("./fonts/LibreBaskerville-Bold.ttf") format("truetype");
+    
+    font-family: 'Italic';
+    src: url("./fonts/LibreBaskerville-RegularItalic.ttf") format("truetype");
 }

@@ -2,11 +2,12 @@
     color:#683cff;
     display: inline;
     margin-right: 10px;
+    font-size: 13px;
 }
 .description {
     color: #544567;
-    font-family: 'Beausite';
-    font-size: 15px;
+    font-family: 'Beausite Classic';
+    font-size: 13px;
 }
 .help {
     text-align: center;

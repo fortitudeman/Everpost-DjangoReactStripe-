@@ -4,17 +4,18 @@ import logo from '../../images/logo.png';
 import messageIcon from '../../images/icon1.png';
 
 export default function PostHeader(props) { 
-    let button, text, logoClass, stripeClass;
+    let button, text, logoClass, stripeClass, secondClass;
     if (props.value === "skip"){
         button = <button className='skip'>
                     <span>Skip to payment</span>
                 </button>
         text = <p>
                 So, you're going with Everpost<br />
-                <span>Complete Post.</span> 
+                <span>Complete Post. </span>
                 Awesome.
             </p>
         logoClass = "col-md-3 ever-logo"
+        secondClass = "col-md-6 second-bar"
         stripeClass = "col-md-6 stripe-logo"
     }
         
@@ -24,6 +25,7 @@ export default function PostHeader(props) {
                 </button>
         logoClass = "col-md-3 ever-logo hidden-logo"
         stripeClass = "col-md-6 stripe-logo hidden-stripe"
+        secondClass = "col-md-6 secondbar"
         text =  <>
                     <div className="row paynow">
                         <div className="col-md-4">
@@ -46,7 +48,7 @@ export default function PostHeader(props) {
                         </div>
                     </div>
                     <div className="message">
-                        <img src={messageIcon} className="message" alt="messageIcon"/>
+                        <img src={messageIcon} alt="messageIcon"/>
                         <p>
                             Questions you might have.
                         </p>
@@ -65,7 +67,7 @@ export default function PostHeader(props) {
                 <div className = {`${logoClass}`}>
                     <img src={logo} alt="everpost logo"/>
                 </div>
-                <div className = "col-md-6 second-bar">
+                <div className = {`${secondClass}`}>
                     {text}
                 </div>
                 <div className="col-md-3">

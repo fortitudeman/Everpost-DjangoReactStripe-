@@ -1,7 +1,17 @@
-.post {
-    background-color: #f2f1f8;
-    background-image: url("../../images/background1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* padding: 10px; */
+@media only screen and (max-width: 990px) {
+    .post {
+        background-color: #f2f1f8;
+        background-image: url("../../images/mobileBack.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+@media only screen and (min-width : 990px) {
+    .post {
+        background-color: #f2f1f8;
+        background-image: url("../../images/background1.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 }

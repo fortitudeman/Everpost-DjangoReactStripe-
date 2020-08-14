@@ -13,7 +13,7 @@
 }
 .left {
     border-radius: 7px 30px 30px 30px;
-    margin-right: 5%;
+    margin-right: 10px;
     float:right;
 }
 .card-header {
@@ -73,7 +73,7 @@
 }
 .right {
     border-radius: 30px 20px 30px 30px;
-    margin-left: 5%;
+    margin-left: 10px;
     float:left;
 }
 

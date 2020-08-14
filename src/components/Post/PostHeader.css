@@ -5,7 +5,7 @@
 
 .ever-logo {
     min-width: 50px;
-    padding-left: 20px;
+    padding-left: 47px;
 }
 .ever-logo img {
     width: 60%;
@@ -18,7 +18,11 @@
     font-size: 47px;
 }
 .second-bar p {
-    font-size: 47px;
+    font-size: 48px;
+    font-family: sans-serif;
+}
+.second-bar {
+    margin-top: 194px;
 }
 .second-bar p span {
     display:inline-block;
@@ -28,22 +32,29 @@
     background-size:100% 2px;
     background-position:bottom 0 left 0,bottom 5px left 0;
     background-repeat:no-repeat;
+    font-family: sans-serif;
+    margin-right: 15px;
 }
 .paynow {
     margin: 10px 10px
 }
 .message {
-    margin-top: 100px;
+    margin-top: 130px;
     margin-bottom: 50px;
 }
 .message img {
-    width:10%;
+    width:7%;
     margin-bottom: 30px;
+}
+.message p {
+    font-family: 'Beausite Classic';
+    font-size: 40px;
 }
 .message-text {
     color: #544567;
-    font-family: 'Beausite';
-    font-size: 32px;
+    font-family: 'Beausite Classic';
+    font-size: 26px;
+    margin: auto 110px 50px auto;
 }
 .skip-button {
     float: right;
@@ -74,18 +85,19 @@
     width: auto;
 }
 .power span {
-    font-family: 'Beausite';
+    font-family: 'Beausite Classic';
     display: block;
     color: #afacc8;
 }
 .power span p {
-    font-family: 'Bold';
+    font-family:'Beausite Classic'; 
     font-size: 20px;
     display: inline;
     color: #9595b3;
+    font-weight: bold;
 }
 .skip span {
-    font-family: "Beausite";
+    font-family: "Beausite Classic";
 }
 
 .title p span {
@@ -116,9 +128,6 @@
     }
     .paynow,.hidden-skip, .hidden-stripe, .hidden-logo {
         display: none;
-    }
-    .message {
-        margin-top: 20px;
     }
     .second-bar p{
         font-size: 28px;
