@@ -16,13 +16,13 @@ const Poster = () => {
                     <div keyid={`${content.indexOf(i)}`} className="card left" >
                         <div className="card-header">
                             <div className="sup">Q</div>
-                            <div className="content">
+                            <div className="content content-header">
                                 {i.title}
                             </div>
                         </div>
                         <div className="card-content">
                             <div className="sup">A</div>
-                            <div className="content" 
+                            <div className="main-content content" 
                                 dangerouslySetInnerHTML={{
                                 __html: i.content}}>
                             </div>
@@ -40,13 +40,13 @@ const Poster = () => {
                         <div className="card right" >
                             <div className="card-header">
                                 <div className="sup">Q</div>
-                                <div className="content">
+                                <div className="content content-header">
                                     {i.title}
                                 </div>
                             </div>
                             <div className="card-content">
                                 <div className="sup">A</div>
-                                <div className="content"
+                                <div className="main-content content"
                                     dangerouslySetInnerHTML={{
                                         __html: i.content}}>
                                 </div>
@@ -63,13 +63,13 @@ const Poster = () => {
                             <img src={image1} className="img1" alt="group"/>
                             <div className="card-header">
                                 <div className="sup">Q</div>
-                                <div className="content">
+                                <div className="content content-header">
                                     {i.title}
                                 </div>
                             </div>
                             <div className="card-content">
                                 <div className="sup">A</div>
-                                <div className="content"
+                                <div className="main-content content"
                                     dangerouslySetInnerHTML={{
                                         __html: i.content}}>
                                 </div>

@@ -11,20 +11,25 @@
     margin-top: 100px;
 }
 .unturned div h4 {
-    line-height: 50px;
+    line-height: 10px;
     color: #504267;
     display: inline;
     margin-left: 3%;
+    font-family: 'ModernEra-Regular';
+}
+.unturned div h2 {
+    font-family: 'Beausite Classic';
+    font-size: 40px;
 }
 .unturned div div {
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: 30px;
+    margin-bottom: 120px;
 }
 .unturned div div img {
-    width: 3%;
+    width: 4%;
 }
 .explain {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
     font-size: 21px;
     color: #504267;

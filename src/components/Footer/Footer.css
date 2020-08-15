@@ -3,35 +3,37 @@
     font-weight: 400;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding:2rem 0;color: rgb(180,180,180);
-    display: inline-flex;
+    display: flex;
+
 }
 
 .leftwrapper {
     box-shadow: 10px 0 5px -2px #f8f8f8;
 }
 .footer-left span {
-    font-family: 'Beausite';
+    font-family: 'Beausite Classic';
     display: block;
     color: #afacc8;
     font-size: 15px;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 .footer-left span p {
-    font-family: 'Bold';
+    font-family: 'Beausite Classic';
+    font-weight: bold;
     font-size: 15px;
     display: inline;
     color: #9595b3;
 }
 .footer-left a {
-    margin-left: 10%;
+    margin-left: 5%;
     color: #9595b3;
+    font-family: 'Beausite Classic';
 }
 .card-explanation {
-    margin-top: 4%;
-    margin-left: 10%;
-    margin-right: 30%;
+    margin: 4% 30% 30% 10%;
     color: #9595b3;
-    font-family: 'Beausite';
+    font-family: 'Beausite Classic';
+    font-size: 15px;
     line-height: 130%;
 }
 .footer-bar {
@@ -68,5 +70,70 @@
     }
     .seperate {
         display: none;
+    }
+}
+@media only screen and (min-width: 1300px) {
+    .leftwrapper {
+        height: 288px;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    .leftwrapper {
+        height: 240px;
+    }
+}
+@media only screen and (min-width: 990px) {
+    .leftwrapper {
+        height: 228px;
+    }
+    .explain-hidden {
+        display: none;
+    }
+    .power-hidden {
+        display: none;
+    }
+}
+@media only screen and (max-width: 990px) {
+    .card-explanation {
+        display: none;
+    }
+    .footer-left {
+        display: none;
+    }
+    .explain-hidden {
+        display: flex;
+    }
+    .explain-hidden p {
+        margin: 4% 11% 6% 11%;
+        color: #9595b3;
+        font-family: 'Beausite Classic';
+        font-size: 15px;
+        line-height: 130%;
+    }
+    .power-hidden {
+        display: block;
+    }
+    .power-hidden span {
+        color: #9595b3;
+        font-family: 'Beausite Classic';
+        font-size: 15px;
+        line-height: 130%;
+    }
+    .stripe-bold {
+        margin-left: 5px;
+        font-family:'Bold';
+        font-size: 20px;
+        color:#9595b3;
+        line-height: 40px;
+    }
+    .footer-bar {
+        height: 260px;
+    }
+    .terms a{
+        color: #9595b3;
+        font-family: 'Beausite Classic';
+        font-size: 15px;
+        line-height: 250%;
+        margin-right: 10px;
     }
 }

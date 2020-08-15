@@ -1,6 +1,6 @@
 .amount {
     margin-left: 45%;
-    margin-top:70px;
+    margin-top:90px;
     float: left;
 }
 .amount img {
@@ -9,6 +9,8 @@
 }
 .amount h4 {
     color: #767676;
+    font-family: 'Beausite Classic';
+    font-size: 18px;
 }
 .per {
     padding: 0;

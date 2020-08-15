@@ -32,11 +32,12 @@
      background:#a1a1a1; 
      padding:0 10px; 
      background-color: #ffffff;
-     font-family: 'Beausite';
+     font-family: 'Beausite Classic';
 }
 .form-group label {
     float: left;
     color:#616161;
+    font-family: 'Beausite Classic';
 }
 form{
     margin-top: 50px;
@@ -53,7 +54,8 @@ form{
     border-radius: 10px;
     outline:none;
     border:none;
-    font-family: 'Geometrica';
+    font-family: 'Beausite Classic';
+    font-size: 17px;
 }
 .cardElement {
     width:350% 
@@ -69,7 +71,7 @@ form{
     .stripeInfo {
         margin: auto;
         text-align: center;
-        padding:10%;
+        padding:10% 10% 1% 10%;
     }
     .cardElement {
         width: 300%;
