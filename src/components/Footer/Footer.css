@@ -74,18 +74,38 @@
 }
 @media only screen and (min-width: 1300px) {
     .leftwrapper {
-        height: 288px;
+        height: 290px;
+    }
+    .explain-hidden {
+        display: none;
+    }
+    .power-hidden {
+        display: none;
     }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (max-width: 1300px) and (min-width: 1100px) {
     .leftwrapper {
-        height: 240px;
+        height: 250px;
+    }
+    .explain-hidden {
+        display: none;
+    }
+    .power-hidden {
+        display: none;
     }
 }
-@media only screen and (min-width: 990px) {
+@media only screen and (max-width: 1100px) and (min-width: 990px) {
     .leftwrapper {
         height: 228px;
     }
+    .explain-hidden {
+        display: none;
+    }
+    .power-hidden {
+        display: none;
+    }
+}
+@media only screen and (min-width: 990px) {
     .explain-hidden {
         display: none;
     }
