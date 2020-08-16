@@ -1,87 +1,83 @@
 import React from 'react';
 import './PostHeader.css';
-import logo from '../../images/logo.png';
 import messageIcon from '../../images/icon1.png';
+import stripe1 from '../../images/logostripe.png';
+import Header from '../Header/Header';
+import HelpBar from '../HelpBar/helpbar';
 
 export default function PostHeader(props) { 
-    let button, text, logoClass, stripeClass, secondClass;
-    if (props.value === "skip"){
-        button = <button className='skip'>
-                    <span>Skip to payment</span>
+    let text, secondClass;
+    if (props.value === "fixed") {
+        secondClass = "second-bar"
+        text = 
+            <>
+                <p className="large">
+                    So, you're going with Everpost&nbsp;
+                    <span>Complete Post. </span>
+                    Awesome.
+                </p>
+                <p className="small">
+                    So, you're going with Everpost&nbsp;
+                    <span>Complete</span>
+                    <span> Post.</span>
+                    Awesome.
+                </p>
+                <button className="skip-button small">
+                Skip to payment
                 </button>
-        text = <p>
-                So, you're going with Everpost<br />
-                <span>Complete Post. </span>
-                Awesome.
-            </p>
-        logoClass = "col-md-3 ever-logo"
-        secondClass = "col-md-6 second-bar"
-        stripeClass = "col-md-6 stripe-logo"
-    }
-        
-    if (props.value == "pay"){
-        button = <button className='skip hidden-skip'>
-                    <span>Pay now</span>
+                <button className="small small-power">
+                    <img src={stripe1} />
                 </button>
-        logoClass = "col-md-3 ever-logo hidden-logo"
-        stripeClass = "col-md-6 stripe-logo hidden-stripe"
-        secondClass = "col-md-6 secondbar"
+            </>
+    } else {
+        secondClass = "question"
         text =  <>
-                    <div className="row paynow">
-                        <div className="col-md-4">
-                            <a href="#">
-                                <span className="number">1</span>
-                                <span className="description">Watch what's next?</span>
-                            </a>
+                    <div className="row">
+                        <div className="col-md-3"></div>
+                        <div className="col-md-6 col-sm-12 col-xs-12 question-content">
+                            <div className="row paynow">
+                                <div className="col-md-4">
+                                    <a href="#">
+                                        <span className="number">1</span>
+                                        <span className="description">Watch what's next?</span>
+                                    </a>
+                                </div>
+                                <div className="col-md-4">
+                                    <a href="#">
+                                        <span className="number">2</span>
+                                        <span className="description">Read FAQs</span>
+                                    </a>
+                                </div>
+                                <div className="col-md-4">
+                                    <a href="#">
+                                        <span className="number">3</span>
+                                        <span className="description">Make payment</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="message">
+                                <img src={messageIcon} alt="messageIcon"/>
+                                <p>
+                                    Questions you might have.
+                                </p>
+                            </div>
+                            <div className="message-text">
+                                We've answered a list of expected questions
+                                you may have as we get started together
+                            </div>
                         </div>
-                        <div className="col-md-4">
-                            <a href="#">
-                                <span className="number">2</span>
-                                <span className="description">Read FAQs</span>
-                            </a>
-                        </div>
-                        <div className="col-md-4">
-                            <a href="#">
-                                <span className="number">3</span>
-                                <span className="description">Make payment</span>
-                            </a>
-                        </div>
+                        <div className="col-md-3 col-sm-3"></div>
+                        
                     </div>
-                    <div className="message">
-                        <img src={messageIcon} alt="messageIcon"/>
-                        <p>
-                            Questions you might have.
-                        </p>
-                    </div>
-                    <div className="message-text">
-                        We 've answered a list of expected questions
-                        you may have as we get started together
-                    </div>
+                    
                                
                 </>
     }
-        
     return (
         <div className="container-fluid">
-            <div className="row logo-bar">
-                <div className = {`${logoClass}`}>
-                    <img src={logo} alt="everpost logo"/>
-                </div>
-                <div className = {`${secondClass}`}>
-                    {text}
-                </div>
-                <div className="col-md-3">
-                    <div className="row">
-                        <div className="col-md-6 skip-button">
-                            {button}
-                        </div>
-                        <div className={`${stripeClass}`}>
-                            <button className="power">
-                                <span>Powered by <p>stripe</p></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <Header value={props.value}/>
+            <div className={`${secondClass}`}>
+                {text}
             </div>
         </div>
     )

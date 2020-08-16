@@ -14,14 +14,17 @@
 }
 .per {
     padding: 0;
+    margin:0 5px;
+    line-height: 10px;
 }
 .per p {
-    margin: 0;
+    margin: 5px;
     color:#767676;
 }
 .amount h1 {
     font-family: 'Bold';
-    margin:auto;
+    margin:0;
+    font-weight: bold;
 }
 .amount-detail {
     display: inline-flex;
@@ -59,17 +62,11 @@
         display:flex;
         justify-content: center;
     }
-    .amount h1 {
-        margin:0
-    }
     .per {
         display: contents;
     }
     .per p {
-        margin-top: 10px;
-    }
-    .per #per {
-        margin:10px 5px;
+        margin-top: 20px;
     }
 }
 @media only screen and (max-width:500px) {

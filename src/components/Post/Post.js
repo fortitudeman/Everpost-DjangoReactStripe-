@@ -9,7 +9,7 @@ import Unturned from '../unturned/unturned';
 const Post = () => {
     return (
         <div className="post">
-          <PostHeader value="skip" />
+          <PostHeader value="fixed" />
           <HelpBar /> 
           <HelpVideo />
           <PostHeader value="pay" />

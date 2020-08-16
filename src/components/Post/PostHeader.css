@@ -7,10 +7,7 @@
     min-width: 50px;
     padding-left: 47px;
 }
-.ever-logo img {
-    width: 60%;
-    float: left;
-}
+
 .title {
     padding-top: 10%;
 }
@@ -22,7 +19,8 @@
     font-family: sans-serif;
 }
 .second-bar {
-    margin-top: 194px;
+    margin: 194px 10%;
+    text-align: center;
 }
 .second-bar p span {
     display:inline-block;
@@ -35,15 +33,19 @@
     font-family: sans-serif;
     margin-right: 15px;
 }
+.question {
+    margin: -50px 10%;
+}
 .paynow {
     margin: 10px 10px
 }
 .message {
     margin-top: 130px;
     margin-bottom: 50px;
+    text-align: center;
 }
 .message img {
-    width:7%;
+    width:60px;
     margin-bottom: 30px;
 }
 .message p {
@@ -53,8 +55,9 @@
 .message-text {
     color: #544567;
     font-family: 'Beausite Classic';
-    font-size: 26px;
-    margin: auto 110px 50px auto;
+    font-size: 21px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 .skip-button {
     float: right;
@@ -80,21 +83,21 @@
     background-color: transparent;
     border-radius: 5px;
     border: solid 1px #afacc8;
+    border: none;
     height: 30px;
     outline: none;
-    width: auto;
+    width: 150px;
 }
-.power span {
-    font-family: 'Beausite Classic';
-    display: block;
-    color: #afacc8;
+.power img {
+    width: 100%;
 }
-.power span p {
-    font-family:'Beausite Classic'; 
-    font-size: 20px;
-    display: inline;
-    color: #9595b3;
-    font-weight: bold;
+.small-power {
+    border: none;
+    background: transparent;
+}
+.small-power img {
+    width: 50%;
+    margin-top: 20px;
 }
 .skip span {
     font-family: "Beausite Classic";
@@ -109,15 +112,12 @@
     background-position:bottom 0 left 0,bottom 5px left 0;
     background-repeat:no-repeat;
 }
-
 @media only screen and (max-width: 990px) {
-    .skip-button {
-        float: none;
-        margin-top: 75px;
+    .question {
+        margin: -50px 10px;
     }
-    .ever-logo img {
-        float: none;
-        width: 40%;
+    .large {
+        display: none;
     }
     .power {
         margin-top: 10px;
@@ -132,16 +132,28 @@
     .second-bar p{
         font-size: 28px;
     }
+    .second-bar {
+        margin: 70px 10%;
+    }
     .message-text {
-        font-size: 24px;
+        font-size: 18px;
+    }
+    .message p {
+        font-size: 27px;
     }
 }
 @media only screen and (min-width:991px) and (max-width: 1300px) {
+    .question-content {
+        margin: -40px 28%;
+    }
     .power {
         height: 50px;
         margin-top: 0;
     }
     .skip{
         min-width: 115px;
+    }
+    .small {
+        display: none;
     }
 }
