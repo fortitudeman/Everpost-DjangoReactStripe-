@@ -1,0 +1,39 @@
+.cardinfo {
+    border-collapse: collapse;
+}
+.cardinfo, td {
+    border: 1px solid #ccc;
+}
+.card-label {
+    display: contents;
+}
+.cardinfo input {
+    border: none;
+    height: 34px;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+}
+.cardinfo img {
+    width: 20%;
+    margin-right: 2px;
+    float:right;
+}
+.card-logo {
+    width: 30%; 
+    border-left-style: none;
+    border-radius: 0 5px 5px 0;
+}
+.number-td, .cvc-td{
+    border-right: none;
+}
+.number-td {
+    border-top-left-radius: 5px;
+}
+.cvclogo {
+    border-left: none;
+}
+.expired-td {
+    width: 50%;
+    border-bottom-right-radius: 5px;
+}

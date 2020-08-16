@@ -9,7 +9,7 @@ export const Pay = () => {
             <div className="col col-md-6 col-sm-12 col-xs-12 amountWrapper">
                 <Amount />
             </div>
-            <div className="col col-md-6 col-sm-12 col-xs-12">
+            <div className="col col-md-6 col-sm-12 col-xs-12 paywrapper">
                 {/* <DetailInfo /> */}
                 <CardForm />
             </div>

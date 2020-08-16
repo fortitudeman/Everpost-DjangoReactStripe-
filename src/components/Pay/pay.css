@@ -3,3 +3,6 @@
     display: table-cell;
     vertical-align: top;
 }
+.paywrapper {
+    box-shadow: inset 10px 0 5px -2px #f8f8f8;
+}

@@ -1,9 +1,10 @@
 import React from "react";
 import Notifications,{ notify } from 'react-notify-toast';
 import { injectStripe, CardElement } from "react-stripe-elements";
-
-import gPay from '../../images/gPaylogo.png'
-import './checkoutform.css'
+import CardInfo from '../CardInfo/CardInfo';
+import gPay from '../../images/gPaylogo.png';
+import './checkoutform.css';
+import Zip from '../Zip/Zip';
 
 //CheckoutForm renders the input field and a button and injects
 //this.props.stripe.createToken  via props
@@ -99,13 +100,13 @@ class CheckoutForm extends React.Component {
             <label htmlFor="email">Email</label>
             <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
           </div>
+          <CardInfo />
           <div className="form-group">
             <label htmlFor="name">Name on Card</label>
             <input type="text" className="form-control" name="name" id="name" onChange={this.handleChange}/>
           </div>
-          
-          
-          <div className="form-group">
+          <Zip />
+          {/* <div className="form-group">
             <label htmlFor="info">Card Information
               <CardElement
                 className="cardElement"
@@ -132,7 +133,7 @@ class CheckoutForm extends React.Component {
                 <Notifications />
               </div>
             </label>
-          </div>
+          </div> */}
           <button className="form-btn">Subscribe</button>
         </form>
       </div>
