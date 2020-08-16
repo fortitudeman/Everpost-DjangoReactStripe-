@@ -19,7 +19,7 @@
     font-family: sans-serif;
 }
 .second-bar {
-    margin: 194px 10%;
+    margin: 240px 25% 0 25%;
     text-align: center;
 }
 .second-bar p span {
@@ -136,13 +136,13 @@
         margin: 70px 10%;
     }
     .message-text {
-        font-size: 18px;
+        font-size: 20px;
     }
     .message p {
         font-size: 27px;
     }
 }
-@media only screen and (min-width:991px) and (max-width: 1300px) {
+@media only screen and (min-width:991px){
     .question-content {
         margin: -40px 28%;
     }

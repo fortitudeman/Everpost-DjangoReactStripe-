@@ -3,7 +3,6 @@ import './PostHeader.css';
 import messageIcon from '../../images/icon1.png';
 import stripe1 from '../../images/logostripe.png';
 import Header from '../Header/Header';
-import HelpBar from '../HelpBar/helpbar';
 
 export default function PostHeader(props) { 
     let text, secondClass;
