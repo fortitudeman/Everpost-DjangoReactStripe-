@@ -37,19 +37,19 @@ export default function PostHeader(props) {
                             <div className="row paynow">
                                 <div className="col-md-4">
                                     <a href="#">
-                                        <span className="number">1</span>
+                                        <span className="num">1</span>
                                         <span className="description">Watch what's next?</span>
                                     </a>
                                 </div>
                                 <div className="col-md-4">
                                     <a href="#">
-                                        <span className="number">2</span>
+                                        <span className="num">2</span>
                                         <span className="description">Read FAQs</span>
                                     </a>
                                 </div>
                                 <div className="col-md-4">
                                     <a href="#">
-                                        <span className="number">3</span>
+                                        <span className="num">3</span>
                                         <span className="description">Make payment</span>
                                     </a>
                                 </div>

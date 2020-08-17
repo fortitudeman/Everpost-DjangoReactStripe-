@@ -17,11 +17,28 @@ class CheckoutForm extends React.Component {
     cvc: '',
     name:'',
     resp_message: "",
+    expired:'',
     expYear: '',
     expMonth: '',
-    cardNumber: '',
+    number: '',
     card_errors: "",
-    formProcess: false
+    formProcess: false,
+    country: ""
+  }
+  childhandleChange = (e) => {
+    let value = e.target.value;
+    if (typeof(e) === "object"){
+      if (e.target.name === "number")
+        value = e.target.value.replace(/\s/g, "")
+      this.setState({
+        [e.target.name]: value
+      })
+    }
+    else {
+      this.setState({
+        country: e
+      })
+    }
   }
   handleCardErrors = card_dets => {
     console.log("Card Section dets", card_dets);
@@ -32,33 +49,40 @@ class CheckoutForm extends React.Component {
     }
   };
   handleChange = e => {
-    if (e.target.name === "expired"){
-      this.setState({
-        ['expMonth']:e.target.value.split('/')[0]
-      })
-      this.setState({
-        ['expYear']:e.target.value.split('/')[1]
-      })
-    }
-    else {
-        this.setState({
-        [e.target.name]:e.target.value
-      });
-    }
+    this.setState({
+      [e.target.name]:e.target.value
+    });
   }
   handleSubmit = e => {
+    debugger
     e.preventDefault();
+    console.log(this.state)
+    console.log(this.props)
     this.setState({ card_errors: "", resp_message: "" });
     /*
     Within the context of Elements, this call to createToken knows which
     Element to tokenize, since there's only one in this group.
     */
     return this.props.stripe
-      .createToken({ type: "card", name: this.state.name })
+      // .createToken({ type: "card", name: this.state.name })
+      .createToken({
+        number: this.state.number,
+        cvc:this.state.cvc
+      })
       .then(result => {
+        debugger
+        console.log(result)
         if (result.error) {
           console.log("THERE IS AN ERROR IN YOUR FORM", result.error);
-          notify.show(result.error.message, "custom", 3000, { background: 'blue', text: "#FFFFFF" })
+          notify.show(
+            result.error.message, 
+            "custom", 
+            3000, 
+            { 
+              background: 'blue', 
+              text: "#FFFFFF" 
+            }
+          )
           return this.setState({ card_errors: result.error.message });
         } else {
           console.log(
@@ -71,6 +95,8 @@ class CheckoutForm extends React.Component {
           formData.append("amount", 192000);
           formData.append("source", result.token.id);
           formData.append("name",result.token.card.name)
+          console.log(formData, "--------formdata----------")
+          debugger
           return fetch('/api/create-charge/', {
             method: "POST",
             headers: {
@@ -98,14 +124,30 @@ class CheckoutForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
+            <input 
+              type="email" 
+              className="form-control" 
+              id="email" 
+              aria-describedby="emailHelp" 
+            />
           </div>
-          <CardInfo />
+          <CardInfo 
+            handleChange = { this.childhandleChange } 
+            number={ this.state.number }
+          />
           <div className="form-group">
             <label htmlFor="name">Name on Card</label>
-            <input type="text" className="form-control" name="name" id="name" onChange={this.handleChange}/>
+            <input 
+              type="text" 
+              className="form-control" 
+              name="name" 
+              id="name" 
+              onChange={this.handleChange}
+            />
           </div>
-          <Zip />
+          <Zip 
+            handleChange = { this.childhandleChange }
+          />
           {/* <div className="form-group">
             <label htmlFor="info">Card Information
               <CardElement

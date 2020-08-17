@@ -11,7 +11,11 @@ class Zip extends Component {
     selectCountry (val) {
         this.setState({ country: val });
     }
-
+    handleChange = (val) => {
+        this.props.handleChange(val);
+        this.selectCountry(val)
+    }
+    // handleChange = this.props.childhandleChange;
     render () {
         const { country } = this.state;
         return (
@@ -23,18 +27,22 @@ class Zip extends Component {
                             <td>
                                 <CountryDropdown
                                     value={country}
-                                    onChange={(val) => this.selectCountry(val)} />
+                                    onChange={(val) => this.handleChange(val)} />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input type="text" name="zip" className="zip" placeholder="ZIP"/>
+                                <input 
+                                    type="text" 
+                                    name="zip" 
+                                    className="zip" 
+                                    placeholder="ZIP"
+                                    onChange = {this.handleChange}    
+                                />
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                
-                
             </div>
         );
     }
