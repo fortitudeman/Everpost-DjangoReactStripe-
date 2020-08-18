@@ -20,11 +20,9 @@ const CardInfo =(props) => {
     const handleBlur = () => {
         console.log('[blur]');
     };
-    const childhandleChange = (change) => {
-        console.log('[change]', change);
-    };
-    const handleClick = () => {
-        console.log('[click]');
+    const childhandleChange = (e) => {
+        console.log('[change]');
+        console.log("*************************", document.getElementsByTagName("iframe")[1].children)
     };
     const handleFocus = () => {
         console.log('[focus]');
@@ -54,35 +52,36 @@ const CardInfo =(props) => {
     };
 
 
-    useEffect (() => {
+    // useEffect (() => {
 
-        $( "input[name='number']" ).on('keypress change', 
-            function () {
-                $(this).val(function (index, value) {
-                    return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
-                });
-            });
-        $( "input[name='expired']" ).on('keypress change', 
-            function () {
-                $(this).val(function (index, value) {
-                    if (value.length == 5) return value
-                    else 
-                        return value.replace(/\W/gi, '').replace(/(.{2})/g, '$1/');
-                });
-            });
-    })
+    //     $( "input[name='number']" ).on('keypress change', 
+    //         function () {
+    //             $(this).val(function (index, value) {
+    //                 return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
+    //             });
+    //         });
+    //     $( "input[name='expired']" ).on('keypress change', 
+    //         function () {
+    //             $(this).val(function (index, value) {
+    //                 if (value.length == 5) return value
+    //                 else 
+    //                     return value.replace(/\W/gi, '').replace(/(.{2})/g, '$1/');
+    //             });
+    //         });
+    // })
     return (
         <div className="form-group">
             <label className="card-label">Card Information</label>
             <table className="cardinfo">
                 <tbody>
                     <tr>
-                        <td colSpan="2" className="number-td">
+                        <td colSpan="2" className="number-td"
+                                onChange={handleChange}>
                             <CardNumberElement
                                 onBlur={handleBlur}
-                                onChange={childhandleChange}
                                 onFocus={handleFocus}
                                 onReady={handleReady}
+                                onChange={childhandleChange}
                                 // {...createOptions(this.props.fontSize)}
                             />
                             {/* <input
@@ -107,7 +106,7 @@ const CardInfo =(props) => {
                         <td className="expired-td">
                         <CardExpiryElement
                             onBlur={handleBlur}
-                            onChange={childhandleChange}
+                            onChange={handleChange}
                             onFocus={handleFocus}
                             onReady={handleReady}
                             // {...createOptions(this.props.fontSize)}
@@ -124,7 +123,7 @@ const CardInfo =(props) => {
                         <td className="cvc-td">
                             <CardCvcElement
                                 onBlur={handleBlur}
-                                onChange={childhandleChange}
+                                onChange={handleChange}
                                 onFocus={handleFocus}
                                 onReady={handleReady}
                                 // {...createOptions(this.props.fontSize)}

@@ -7,12 +7,16 @@
 .card-label {
     display: contents;
 }
-.cardinfo input {
+.cardinfo tr {
     border: none;
     height: 34px;
     outline: none;
     width: 100%;
     padding: 10px;
+}
+iframe{
+    height: 100px;
+    padding-left: 10px !important;
 }
 .cardinfo img {
     width: 20%;
@@ -36,4 +40,7 @@
 .expired-td {
     width: 50%;
     border-bottom-right-radius: 5px;
+}
+.cardinfo td {
+    padding-left: 10px
 }

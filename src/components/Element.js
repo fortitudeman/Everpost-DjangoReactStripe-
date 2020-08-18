@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
-import {elementContextTypes} from './Elements';
+import {type ElementContext, elementContextTypes} from './Elements';
 import isEqual from '../utils/isEqual';
 
 // class Element extends Component {
@@ -79,13 +79,11 @@ const Element = (
         // (We would unnecessarily re-render if we were tracking them with state.)
         this._options = options;
       }
-  
       componentDidMount() {
         this.context.addElementsLoadListener((elements: ElementsShape) => {
           if (!this._ref) {
             return;
           }
-  
           const element = elements.create(type, this._options);
           this._element = element;
   

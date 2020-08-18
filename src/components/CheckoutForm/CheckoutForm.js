@@ -48,6 +48,16 @@ class CheckoutForm extends React.Component {
       this.setState({ card_errors: "" });
     }
   };
+  childhandleChange = e => {
+    // let number = document.querySelector(".InputElement")
+    // let number = document.getElementsByClassName("InputElement")[0].value
+    // debugger
+    console.log("------e-----")
+    
+    this.setState({
+      [e.target.name]:e.target.value
+    });
+  }
   handleSubmit = e => {
     debugger
     e.preventDefault();
@@ -104,7 +114,7 @@ class CheckoutForm extends React.Component {
         }
       });
   };
-
+  
   render() {
     return (
       <div className="stripeInfo">
