@@ -1,16 +1,10 @@
 import React from "react";
-import Notifications,{ notify } from 'react-notify-toast';
-import { injectStripe, CardElement } from "react-stripe-elements";
+import { notify } from 'react-notify-toast';
+import { injectStripe } from "react-stripe-elements";
 import CardInfo from '../CardInfo/CardInfo';
 import gPay from '../../images/gPaylogo.png';
 import './checkoutform.css';
 import Zip from '../Zip/Zip';
-
-//CheckoutForm renders the input field and a button and injects
-//this.props.stripe.createToken  via props
-//The token with the encrypted credit card info is sent to my backend
-// So I can send it to stripe
-// zip-code = 99524
 
 class CheckoutForm extends React.Component {
   state = {
@@ -49,30 +43,16 @@ class CheckoutForm extends React.Component {
     }
   };
   childhandleChange = e => {
-    // let number = document.querySelector(".InputElement")
-    // let number = document.getElementsByClassName("InputElement")[0].value
-    // debugger
-    console.log("------e-----")
-    
-    this.setState({
-      [e.target.name]:e.target.value
-    });
+    console.log(e)
+    // this.setState({
+    //   [e.target.name]:e.target.value
+    // });
   }
   handleSubmit = e => {
-    debugger
     e.preventDefault();
-    console.log(this.state)
-    console.log(this.props)
     this.setState({ card_errors: "", resp_message: "" });
-    /*
-    Within the context of Elements, this call to createToken knows which
-    Element to tokenize, since there's only one in this group.
-    */
     return this.props.stripe
-      // .createToken({ type: "card", name: this.state.name })
       .createToken({
-        // number: this.state.number,
-        // cvc:this.state.cvc
       })
       .then(result => {
         debugger
@@ -100,8 +80,6 @@ class CheckoutForm extends React.Component {
           formData.append("amount", 192000);
           formData.append("source", result.token.id);
           formData.append("name",result.token.card.name)
-          console.log(formData, "--------formdata----------")
-          debugger
           return fetch('/api/create-charge/', {
             method: "POST",
             headers: {
@@ -153,42 +131,10 @@ class CheckoutForm extends React.Component {
           <Zip 
             handleChange = { this.childhandleChange }
           />
-          {/* <div className="form-group">
-            <label htmlFor="info">Card Information
-              <CardElement
-                className="cardElement"
-                style={{
-                  base: {
-                    color: "#32325d",
-
-                    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-                    fontSmoothing: "antialiased",
-                    fontSize: "16px",
-                    "::placeholder": {
-                      color: "#aab7c4"
-                    }
-                  },
-                  invalid: {
-                    color: "#fa755a",
-                    iconColor: "#fa755a"
-                  }
-                }}
-                id="info"
-                onChange={this.handleCardErrors}
-              />
-              <div role="alert">
-                <Notifications />
-              </div>
-            </label>
-          </div> */}
           <button className="form-btn">Subscribe</button>
         </form>
       </div>
     );
   }
 }
-
-//The injectStripe HOC provides the this.props.stripe property
-//You can call this.props.stripe.createToken within a component that has been
-// injected in order to submit payment data to Stripe.
 export default injectStripe(CheckoutForm);
