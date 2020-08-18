@@ -6,17 +6,59 @@ import amex from '../../images/amex.png';
 import circlepay from '../../images/circlepay.png';
 import card135 from '../../images/card135.png';
 import $ from 'jquery';
+import {
+    CardNumberElement,
+    CardExpiryElement,
+    CardCvcElement
+} from '../index';
 
 
-const CardInfo = (props) => {
+const CardInfo =(props) => {
 
     const { handleChange, number } = props
+
+    const handleBlur = () => {
+        console.log('[blur]');
+    };
+    const childhandleChange = (change) => {
+        console.log('[change]', change);
+    };
+    const handleClick = () => {
+        console.log('[click]');
+    };
+    const handleFocus = () => {
+        console.log('[focus]');
+    };
+    const handleReady = () => {
+        console.log('[ready]');
+    };
+
+    const createOptions = (fontSize: string, padding: ?string) => {
+        return {
+            style: {
+                base: {
+                    fontSize,
+                    color: '#424770',
+                    letterSpacing: '0.025em',
+                    fontFamily: 'Source Code Pro, monospace',
+                    '::placeholder': {
+                        color: '#aab7c4',
+                    },
+                ...(padding ? {padding} : {}),
+            },
+            invalid: {
+              color: '#9e2146',
+            },
+          },
+        };
+    };
+
+
     useEffect (() => {
 
         $( "input[name='number']" ).on('keypress change', 
             function () {
                 $(this).val(function (index, value) {
-                    // debugger
                     return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
                 });
             });
@@ -36,13 +78,21 @@ const CardInfo = (props) => {
                 <tbody>
                     <tr>
                         <td colSpan="2" className="number-td">
-                            <input 
+                            <CardNumberElement
+                                onBlur={handleBlur}
+                                onChange={childhandleChange}
+                                onFocus={handleFocus}
+                                onReady={handleReady}
+                                // {...createOptions(this.props.fontSize)}
+                            />
+                            {/* <input
+                                data-stripe="number"
                                 type="text" 
                                 name="number" 
                                 value={number} 
                                 className="number" 
                                 placeholder="1234 1234 1234 1234"
-                                onChange = {handleChange} />
+                                onChange = {handleChange} /> */}
                         </td>
                         <td className="card-logo">
                             <div>
@@ -55,22 +105,38 @@ const CardInfo = (props) => {
                     </tr>
                     <tr>
                         <td className="expired-td">
-                            <input 
+                        <CardExpiryElement
+                            onBlur={handleBlur}
+                            onChange={childhandleChange}
+                            onFocus={handleFocus}
+                            onReady={handleReady}
+                            // {...createOptions(this.props.fontSize)}
+                        />
+                            {/* <input 
+                                data-stripe="expired"
                                 type="text" 
                                 name="expired"  
                                 className="expired" 
                                 placeholder="MM / YY" 
                                 onChange = {handleChange}
-                            />
+                            /> */}
                         </td>
                         <td className="cvc-td">
-                            <input 
+                            <CardCvcElement
+                                onBlur={handleBlur}
+                                onChange={childhandleChange}
+                                onFocus={handleFocus}
+                                onReady={handleReady}
+                                // {...createOptions(this.props.fontSize)}
+                            />
+                            {/* <input 
+                                data-stripe="cvc"
                                 type="text" 
                                 name="cvc" 
                                 className="cvc" 
                                 placeholder="CVC"
                                 onChange = {handleChange} 
-                            />
+                            /> */}
                         </td>
                         <td className="cvclogo">
                             <div>
@@ -79,7 +145,8 @@ const CardInfo = (props) => {
                         </td>
                     </tr>
                 </tbody>
-            </table>                      
+            </table>   
+                           
         </div>
     )
 }

@@ -25,7 +25,7 @@ class CheckoutForm extends React.Component {
     formProcess: false,
     country: ""
   }
-  childhandleChange = (e) => {
+  handleChange = (e) => {
     let value = e.target.value;
     if (typeof(e) === "object"){
       if (e.target.name === "number")
@@ -48,11 +48,6 @@ class CheckoutForm extends React.Component {
       this.setState({ card_errors: "" });
     }
   };
-  handleChange = e => {
-    this.setState({
-      [e.target.name]:e.target.value
-    });
-  }
   handleSubmit = e => {
     debugger
     e.preventDefault();
@@ -66,8 +61,8 @@ class CheckoutForm extends React.Component {
     return this.props.stripe
       // .createToken({ type: "card", name: this.state.name })
       .createToken({
-        number: this.state.number,
-        cvc:this.state.cvc
+        // number: this.state.number,
+        // cvc:this.state.cvc
       })
       .then(result => {
         debugger
