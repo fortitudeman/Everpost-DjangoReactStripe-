@@ -67,7 +67,6 @@ form{
 @media only screen and (max-width:990px) and (min-width:500px){
     .stripeInfo {
         margin: auto;
-        text-align: center;
         padding:10% 10% 1% 10%;
     }
     .cardElement {
@@ -79,7 +78,6 @@ form{
     .stripeInfo{
         margin-left: auto;
         margin-right: auto;
-        text-align: center;
         padding: 0 15%;
     }
     .cardElement {
