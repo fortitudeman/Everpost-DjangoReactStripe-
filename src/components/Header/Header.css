@@ -26,17 +26,20 @@
 .power-button {
     margin-top: 10px;
     background-color: transparent;
-    border-radius: 5px;
-    border: solid 1px #afacc8;
     height: 30px;
     outline: none;
     width: auto;
     margin-right:10px;
     float:right;
+    border: none;
 }
 .power-button span {
     font-family: "Beausite Classic";
     margin-left: 5px;
+}
+.power-button img {
+    width: 100px;
+    float: right;
 }
 .bold {
     font-weight: bold;
